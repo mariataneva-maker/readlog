@@ -1,0 +1,30 @@
+.quotecard {
+  padding: var(--space-5) 0;
+  border-bottom: var(--border-light);
+}
+
+.quotecard__text {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.quotecard__meta {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.quotecard__page {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.quotecard__date {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-subtle);
+}

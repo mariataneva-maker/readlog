@@ -1,0 +1,50 @@
+.library {
+  padding: 0 var(--space-6);
+}
+
+.library__header {
+  padding: var(--space-10) 0 var(--space-6);
+  border-bottom: var(--border-light);
+}
+
+.library__eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-muted);
+  margin-bottom: var(--space-2);
+}
+
+.library__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-hero);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+.library__list {
+  padding-top: var(--space-2);
+}
+
+.library__add-btn {
+  display: block;
+  width: 100%;
+  margin: var(--space-6) 0;
+  padding: var(--space-4);
+  border: var(--border-mid);
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-muted);
+  text-align: center;
+  background: var(--color-bg);
+}
+
+.library__add-btn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}

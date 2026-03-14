@@ -1,0 +1,31 @@
+.notecard {
+  padding: var(--space-5) 0;
+  border-bottom: var(--border-light);
+}
+
+.notecard__text {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.notecard__meta {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.notecard__type {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-muted);
+}
+
+.notecard__date {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-subtle);
+}

@@ -1,0 +1,58 @@
+/* ============================================================
+   ReadLog Design Tokens
+   Single source of truth — mirrored as Figma Variables
+   ============================================================ */
+
+:root {
+  /* Colors */
+  --color-primary:    #000000;
+  --color-bg:         #ffffff;
+  --color-surface:    #f5f5f5;
+  --color-border:     #eeeeee;
+  --color-border-mid: #e0e0e0;
+  --color-muted:      #999999;
+  --color-subtle:     #cccccc;
+  --color-status-reading:  #000000;
+  --color-status-finished: #555555;
+  --color-status-wishlist: #999999;
+
+  /* Book cover swatches */
+  --cover-1: #1a1a1a;
+  --cover-2: #2d2d2d;
+  --cover-3: #111111;
+  --cover-4: #222222;
+
+  /* Typography */
+  --font-serif:  'Georgia', serif;
+  --font-sans:   'Arial', sans-serif;
+
+  /* Font sizes */
+  --text-xs:   10px;
+  --text-sm:   11px;
+  --text-base: 14px;
+  --text-md:   15px;
+  --text-lg:   17px;
+  --text-xl:   20px;
+  --text-2xl:  28px;
+  --text-hero: 48px;
+
+  /* Spacing (8px base unit) */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Layout */
+  --max-width:    430px;
+  --border-light: 1px solid var(--color-border);
+  --border-mid:   1px solid var(--color-border-mid);
+
+  /* Letter spacing */
+  --tracking-wide:  1px;
+  --tracking-wider: 3px;
+}

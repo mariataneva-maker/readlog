@@ -65,3 +65,21 @@
   align-self: center;
   flex-shrink: 0;
 }
+
+/* ─── Responsive ──────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .bookcard__cover {
+    width: 68px;
+    height: 96px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bookcard__cover {
+    width: 80px;
+    height: 112px;
+  }
+  .bookcard__title {
+    font-size: var(--text-xl);
+  }
+}

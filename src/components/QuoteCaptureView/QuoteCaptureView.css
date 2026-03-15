@@ -179,3 +179,33 @@
   border-radius: 4px;
   margin-bottom: var(--space-8);
 }
+
+/* ─── Responsive ──────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .capture {
+    padding: 0 var(--space-8);
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .capture__viewfinder,
+  .capture__voice {
+    height: 240px;
+  }
+  .capture__methods {
+    gap: var(--space-4);
+  }
+  .capture__method {
+    padding: var(--space-5) var(--space-4);
+  }
+}
+
+@media (min-width: 1440px) {
+  .capture {
+    max-width: 720px;
+  }
+  .capture__viewfinder,
+  .capture__voice {
+    height: 280px;
+  }
+}

@@ -22,16 +22,7 @@ export default function App() {
   } = useReadlog();
 
   return (
-    <div
-      style={{
-        maxWidth: "var(--max-width)",
-        margin: "0 auto",
-        minHeight: "100vh",
-        borderLeft: "1px solid var(--color-border)",
-        borderRight: "1px solid var(--color-border)",
-        background: "var(--color-bg)",
-      }}
-    >
+    <div className="app">
       {view === "library" && (
         <LibraryView
           filter={filter}

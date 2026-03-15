@@ -48,3 +48,34 @@
   color: var(--color-primary);
   border-color: var(--color-primary);
 }
+
+/* ─── Responsive ──────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .library {
+    padding: 0 var(--space-8);
+  }
+  .library__header {
+    padding-top: var(--space-12);
+  }
+  .library__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--space-8);
+  }
+  .library__add-btn {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .library {
+    padding: 0 var(--space-12);
+  }
+  .library__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: var(--space-10);
+  }
+  .library__add-btn {
+    max-width: 280px;
+  }
+}

@@ -56,3 +56,19 @@
   --tracking-wide:  1px;
   --tracking-wider: 3px;
 }
+
+/* ─── Responsive token overrides ─────────────────────────────────────── */
+@media (min-width: 768px) {
+  :root {
+    --text-hero: 56px;
+    --text-2xl:  32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --text-hero: 72px;
+    --text-2xl:  36px;
+    --text-xl:   22px;
+  }
+}

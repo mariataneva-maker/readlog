@@ -21,3 +21,20 @@
   color: var(--color-primary);
   border-bottom-color: var(--color-primary);
 }
+
+/* ─── Responsive ──────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .filtertabs {
+    gap: var(--space-8);
+    padding-top: var(--space-5);
+  }
+  .filtertabs__tab {
+    font-size: var(--text-sm);
+  }
+}
+
+@media (min-width: 1440px) {
+  .filtertabs {
+    gap: var(--space-10);
+  }
+}

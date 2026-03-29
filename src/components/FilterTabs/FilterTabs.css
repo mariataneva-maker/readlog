@@ -7,9 +7,9 @@
 }
 
 .filtertabs__tab {
-  font-family: var(--font-sans);
+  font-family: var(--font-caps);
   font-size: var(--text-xs);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: var(--tracking-wider);
   color: var(--color-muted);
   padding-bottom: var(--space-3);

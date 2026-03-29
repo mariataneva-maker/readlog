@@ -13,17 +13,18 @@
 }
 
 .statsbar__number {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: var(--text-2xl);
-  font-weight: 700;
+  font-weight: 300;
+  font-style: italic;
   line-height: 1;
   color: var(--color-primary);
 }
 
 .statsbar__label {
-  font-family: var(--font-sans);
+  font-family: var(--font-caps);
   font-size: var(--text-xs);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: var(--tracking-wider);
   color: var(--color-muted);
 }

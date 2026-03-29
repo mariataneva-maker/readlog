@@ -5,26 +5,29 @@
 
 :root {
   /* Colors */
-  --color-primary:    #000000;
-  --color-bg:         #ffffff;
-  --color-surface:    #f5f5f5;
-  --color-border:     #eeeeee;
-  --color-border-mid: #e0e0e0;
-  --color-muted:      #999999;
-  --color-subtle:     #cccccc;
-  --color-status-reading:  #000000;
-  --color-status-finished: #555555;
-  --color-status-wishlist: #999999;
+  --color-primary:    #1a1208;
+  --color-bg:         #f7f2e8;
+  --color-surface:    #f2ece0;
+  --color-border:     #ddd5c0;
+  --color-border-mid: #cdc3ac;
+  --color-muted:      #7a6248;
+  --color-subtle:     #b8a888;
+  --color-status-reading:  #1a1208;
+  --color-status-finished: #4a3828;
+  --color-status-wishlist: #7a6248;
 
   /* Book cover swatches */
-  --cover-1: #1a1a1a;
-  --cover-2: #2d2d2d;
-  --cover-3: #111111;
-  --cover-4: #222222;
+  --cover-1: #2a2218;
+  --cover-2: #3d3228;
+  --cover-3: #1a1510;
+  --cover-4: #302820;
 
   /* Typography */
-  --font-serif:  'Georgia', serif;
-  --font-sans:   'Arial', sans-serif;
+  --font-serif:    'Georgia', serif;
+  --font-sans:     'Arial', sans-serif;
+  --font-display:  'Cormorant Garamond', Georgia, serif;
+  --font-title:    'IM Fell English', Georgia, serif;
+  --font-caps:     'Cinzel', 'Palatino Linotype', serif;
 
   /* Font sizes */
   --text-xs:   10px;
@@ -53,8 +56,9 @@
   --border-mid:   1px solid var(--color-border-mid);
 
   /* Letter spacing */
-  --tracking-wide:  1px;
-  --tracking-wider: 3px;
+  --tracking-wide:    1px;
+  --tracking-wider:   3px;
+  --tracking-widest:  5px;
 }
 
 /* ─── Responsive token overrides ─────────────────────────────────────── */

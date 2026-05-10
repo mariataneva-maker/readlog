@@ -2,18 +2,27 @@ import React, { useState } from "react";
 import "./QuoteCaptureView.css";
 
 const METHODS = [
-  { value: "camera", label: "CAMERA", emoji: "📷" },
-  { value: "voice",  label: "VOICE",  emoji: "🎙" },
-  { value: "type",   label: "TYPE",   emoji: "✏️" },
+  { value: "camera", label: "Camera", emoji: "📷" },
+  { value: "voice",  label: "Voice",  emoji: "🎙" },
+  { value: "type",   label: "Type",   emoji: "✏️" },
 ];
 
-export function QuoteCaptureView({ onBack }) {
-  const [method, setMethod] = useState("camera");
+export function QuoteCaptureView({ onBack, onSave }) {
+  const [method, setMethod] = useState("type");
+  const [quoteText, setQuoteText] = useState("");
+  const [chapter, setChapter] = useState("");
+  const [section, setSection] = useState("");
+  const [page, setPage] = useState("");
+
+  function handleSave() {
+    if (!quoteText.trim()) return;
+    onSave({ chapter: chapter.trim(), section: section.trim(), text: quoteText.trim(), page });
+  }
 
   return (
     <div className="capture">
       <button className="capture__back" onClick={onBack}>
-        ← BACK
+        ← Back
       </button>
 
       <h1 className="capture__title">
@@ -49,35 +58,56 @@ export function QuoteCaptureView({ onBack }) {
         </div>
       )}
 
-      {method === "type" && (
-        <textarea
-          className="capture__textarea"
-          placeholder="Type your quote here..."
-          rows={5}
-        />
-      )}
-
       <div className="capture__section-label" style={{ marginTop: 24 }}>
-        CAPTURED TEXT
+        QUOTE
       </div>
       <textarea
         className="capture__textarea"
-        placeholder="Quote will appear here after capture, or type directly…"
-        rows={4}
+        placeholder="Type or paste the quote here…"
+        rows={5}
+        value={quoteText}
+        onChange={(e) => setQuoteText(e.target.value)}
       />
 
+      <div className="capture__section-label">LOCATION</div>
       <div className="capture__fields">
-        <div className="capture__field">
-          <div className="capture__field-label">PAGE NO.</div>
-          <input className="capture__input" type="number" placeholder="e.g. 108" />
+        <div className="capture__field capture__field--full">
+          <div className="capture__field-label">CHAPTER</div>
+          <input
+            className="capture__input"
+            placeholder="e.g. 2: The Psychology of Everyday Actions"
+            value={chapter}
+            onChange={(e) => setChapter(e.target.value)}
+          />
+        </div>
+        <div className="capture__field capture__field--full">
+          <div className="capture__field-label">SECTION</div>
+          <input
+            className="capture__input"
+            placeholder="e.g. Human Thought: Mostly Subconscious"
+            value={section}
+            onChange={(e) => setSection(e.target.value)}
+          />
         </div>
         <div className="capture__field">
-          <div className="capture__field-label">TAG</div>
-          <input className="capture__input" placeholder="e.g. faith, love…" />
+          <div className="capture__field-label">PAGE NO.</div>
+          <input
+            className="capture__input"
+            type="number"
+            placeholder="e.g. 44"
+            value={page}
+            onChange={(e) => setPage(e.target.value)}
+          />
         </div>
       </div>
 
-      <button className="capture__save-btn">SAVE QUOTE</button>
+      <button
+        className={`capture__save-btn${!quoteText.trim() ? " capture__save-btn--disabled" : ""}`}
+        onClick={handleSave}
+        disabled={!quoteText.trim()}
+      >
+        Save quote
+      </button>
     </div>
   );
 }

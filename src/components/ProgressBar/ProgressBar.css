@@ -1,13 +1,15 @@
+.progressbar { flex: 1; }
+
 .progressbar__track {
-  height: 2px;
+  height: 4px;
   background: var(--color-border);
-  border-radius: 1px;
+  border-radius: var(--radius-pill);
   overflow: hidden;
 }
 
 .progressbar__fill {
   height: 100%;
-  background: var(--color-primary);
-  border-radius: 1px;
-  transition: width 0.3s ease;
+  background: var(--color-muted);
+  border-radius: var(--radius-pill);
+  transition: width 0.4s ease;
 }

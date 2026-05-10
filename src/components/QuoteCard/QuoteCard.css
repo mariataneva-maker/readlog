@@ -3,6 +3,20 @@
   border-bottom: var(--border-light);
 }
 
+.quotecard__location {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-muted);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+}
+
+.quotecard__chapter { color: var(--color-primary); }
+.quotecard__location-sep { color: var(--color-muted); }
+.quotecard__section { color: var(--color-muted); }
+
 .quotecard__text {
   font-family: var(--font-serif);
   font-size: var(--text-lg);

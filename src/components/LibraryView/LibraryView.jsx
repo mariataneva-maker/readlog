@@ -31,7 +31,7 @@ export function LibraryView({ filter, onFilterChange, filtered, onBookSelect }) 
         ))}
       </div>
 
-      <button className="library__add-btn">+ ADD BOOK</button>
+      <button className="library__add-btn"><span className="library__add-icon">+</span> Add book</button>
     </div>
   );
 }

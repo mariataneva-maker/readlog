@@ -146,6 +146,10 @@
   margin-bottom: var(--space-6);
 }
 
+.capture__field--full {
+  grid-column: 1 / -1;
+}
+
 .capture__field-label {
   font-family: var(--font-sans);
   font-size: var(--text-xs);
@@ -178,6 +182,13 @@
   letter-spacing: var(--tracking-wider);
   border-radius: 4px;
   margin-bottom: var(--space-8);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.capture__save-btn--disabled {
+  opacity: 0.35;
+  cursor: default;
 }
 
 /* ─── Responsive ──────────────────────────────────────────────────────── */

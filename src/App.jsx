@@ -19,6 +19,7 @@ export default function App() {
     openBook,
     openCapture,
     goBack,
+    saveQuote,
   } = useReadlog();
 
   return (
@@ -45,7 +46,7 @@ export default function App() {
       )}
 
       {view === "capture" && (
-        <QuoteCaptureView onBack={goBack} />
+        <QuoteCaptureView onBack={goBack} onSave={saveQuote} />
       )}
     </div>
   );

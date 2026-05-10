@@ -1,15 +1,13 @@
 import { useState } from "react";
 import { books as initialBooks, sampleQuotes, sampleNotes } from "../data/books";
 
-/**
- * useReadlog — central state management for the ReadLog app.
- * All view state, navigation, and data mutations live here.
- */
 export function useReadlog() {
-  const [view, setView] = useState("library");       // "library" | "book" | "capture"
-  const [activeBook, setActiveBook] = useState(null); // book id
-  const [activeTab, setActiveTab] = useState("quotes"); // "quotes" | "notes"
-  const [filter, setFilter] = useState("all");        // "all" | "reading" | "finished" | "want-to-read"
+  const [view, setView] = useState("library");
+  const [activeBook, setActiveBook] = useState(null);
+  const [activeTab, setActiveTab] = useState("quotes");
+  const [filter, setFilter] = useState("all");
+  const [quotes, setQuotes] = useState(sampleQuotes);
+  const [notes] = useState(sampleNotes);
 
   const filtered =
     filter === "all"
@@ -20,8 +18,8 @@ export function useReadlog() {
     ? initialBooks.find((b) => b.id === activeBook)
     : null;
 
-  const currentQuotes = sampleQuotes.filter((q) => q.bookId === activeBook);
-  const currentNotes  = sampleNotes.filter((n) => n.bookId === activeBook);
+  const currentQuotes = quotes.filter((q) => q.bookId === activeBook);
+  const currentNotes  = notes.filter((n) => n.bookId === activeBook);
 
   function openBook(id) {
     setActiveBook(id);
@@ -44,8 +42,24 @@ export function useReadlog() {
     setActiveBook(null);
   }
 
+  function saveQuote({ chapter, section, text, page }) {
+    const today = new Date();
+    const label = today.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+    const next = {
+      id: Date.now(),
+      bookId: activeBook,
+      chapter,
+      section,
+      text,
+      page: page ? Number(page) : null,
+      date: label,
+    };
+    setQuotes((prev) => [next, ...prev]);
+    setView("book");
+    setActiveTab("quotes");
+  }
+
   return {
-    // state
     view,
     filter,
     activeTab,
@@ -53,12 +67,12 @@ export function useReadlog() {
     currentBook,
     currentQuotes,
     currentNotes,
-    // actions
     setFilter,
     setActiveTab,
     openBook,
     openCapture,
     goBack,
     goToLibrary,
+    saveQuote,
   };
 }

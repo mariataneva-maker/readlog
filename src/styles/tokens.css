@@ -4,42 +4,42 @@
    ============================================================ */
 
 :root {
-  /* Colors */
-  --color-primary:    #1a1208;
-  --color-bg:         #f7f2e8;
-  --color-surface:    #f2ece0;
-  --color-border:     #ddd5c0;
-  --color-border-mid: #cdc3ac;
-  --color-muted:      #7a6248;
-  --color-subtle:     #9a8a70;
-  --color-status-reading:  #1a1208;
-  --color-status-finished: #4a3828;
-  --color-status-wishlist: #7a6248;
+  /* ── Colors: aged parchment ───────────────────────────── */
+  --color-primary:    #1C1712;   /* warm near-black, old ink */
+  --color-bg:         #F8F4EC;   /* cream parchment */
+  --color-surface:    #F2EBDe;   /* deeper parchment */
+  --color-border:     #DDD5C0;   /* warm hairline rule */
+  --color-border-mid: #C4B89E;   /* mid warm rule */
+  --color-muted:      #7A7060;   /* warm brown-grey */
+  --color-subtle:     #A89880;   /* light warm tone */
+
+  --color-status-reading:  #1C1712;
+  --color-status-finished: #5A5044;
+  --color-status-wishlist: #9A8C7A;
 
   /* Book cover swatches */
-  --cover-1: #2a2218;
-  --cover-2: #3d3228;
-  --cover-3: #1a1510;
-  --cover-4: #302820;
+  --cover-1: #1a1a1a;
+  --cover-2: #2d2d2d;
+  --cover-3: #111111;
+  --cover-4: #222222;
 
-  /* Typography */
-  --font-serif:    'Georgia', serif;
-  --font-sans:     'Arial', sans-serif;
-  --font-display:  'Cormorant Garamond', Georgia, serif;
-  --font-title:    'IM Fell English', Georgia, serif;
-  --font-caps:     'Cinzel', 'Palatino Linotype', serif;
+  /* ── Typography ───────────────────────────────────────── */
+  /* Body & quotes — EB Garamond, the workhorse of 19th-c. printing */
+  --font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  /* Display & uppercase labels — Playfair Display for titles */
+  --font-sans:  'Playfair Display', Georgia, serif;
 
   /* Font sizes */
   --text-xs:   10px;
   --text-sm:   11px;
   --text-base: 14px;
-  --text-md:   15px;
-  --text-lg:   17px;
-  --text-xl:   20px;
-  --text-2xl:  28px;
-  --text-hero: 48px;
+  --text-md:   16px;
+  --text-lg:   18px;
+  --text-xl:   22px;
+  --text-2xl:  30px;
+  --text-hero: 52px;
 
-  /* Spacing (8px base unit) */
+  /* ── Spacing (8px base unit) ──────────────────────────── */
   --space-1:  4px;
   --space-2:  8px;
   --space-3:  12px;
@@ -55,24 +55,8 @@
   --border-light: 1px solid var(--color-border);
   --border-mid:   1px solid var(--color-border-mid);
 
-  /* Letter spacing */
-  --tracking-wide:    1px;
-  --tracking-wider:   3px;
-  --tracking-widest:  5px;
-}
-
-/* ─── Responsive token overrides ─────────────────────────────────────── */
-@media (min-width: 768px) {
-  :root {
-    --text-hero: 56px;
-    --text-2xl:  32px;
-  }
-}
-
-@media (min-width: 1440px) {
-  :root {
-    --text-hero: 72px;
-    --text-2xl:  36px;
-    --text-xl:   22px;
-  }
+  /* ── Letter spacing ──────────────────────────────────── */
+  /* Generous tracking — like "BY", "IN THREE VOLUMES" */
+  --tracking-wide:  0.1em;
+  --tracking-wider: 0.18em;
 }

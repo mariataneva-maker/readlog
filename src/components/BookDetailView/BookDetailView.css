@@ -18,7 +18,6 @@
   display: flex;
   gap: var(--space-4);
   padding-bottom: var(--space-6);
-  border-bottom: var(--border-light);
 }
 
 .bookdetail__cover {
@@ -117,38 +116,4 @@
   background: var(--color-primary);
   color: var(--color-bg);
   border-radius: 3px;
-}
-
-/* ─── Responsive ──────────────────────────────────────────────────────── */
-@media (min-width: 768px) {
-  .bookdetail {
-    padding: 0 var(--space-8);
-  }
-  .bookdetail__cover {
-    width: 80px;
-    height: 112px;
-  }
-  .bookdetail__title {
-    font-size: var(--text-2xl);
-  }
-  .bookdetail__tabs {
-    gap: var(--space-10);
-  }
-}
-
-@media (min-width: 1440px) {
-  .bookdetail {
-    padding: 0 var(--space-12);
-  }
-  .bookdetail__cover {
-    width: 100px;
-    height: 140px;
-  }
-  .bookdetail__hero {
-    gap: var(--space-8);
-    padding-bottom: var(--space-8);
-  }
-  .bookdetail__tabs {
-    gap: var(--space-12);
-  }
 }

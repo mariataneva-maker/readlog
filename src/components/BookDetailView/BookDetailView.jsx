@@ -17,7 +17,7 @@ export function BookDetailView({
   return (
     <div className="bookdetail">
       <button className="bookdetail__back" onClick={onBack}>
-        ← LIBRARY
+        ← Library
       </button>
 
       <div className="bookdetail__hero">
@@ -60,7 +60,7 @@ export function BookDetailView({
             <div className="bookdetail__content-header">
               <span className="bookdetail__count">{quotes.length} QUOTES</span>
               <button className="bookdetail__capture-btn" onClick={onCapture}>
-                + CAPTURE
+                + Capture
               </button>
             </div>
             {quotes.map((q) => <QuoteCard key={q.id} quote={q} />)}

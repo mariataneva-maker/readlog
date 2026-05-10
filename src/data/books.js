@@ -45,6 +45,8 @@ export const sampleQuotes = [
   {
     id: 1,
     bookId: 1,
+    chapter: "Book II: An Unfortunate Gathering",
+    section: "The Old Buffoon",
     text: "The awful thing is that beauty is mysterious as well as terrible. God and the devil are fighting there and the battlefield is the heart of man.",
     page: 108,
     date: "Feb 12",
@@ -52,6 +54,8 @@ export const sampleQuotes = [
   {
     id: 2,
     bookId: 1,
+    chapter: "Book I: The History of a Family",
+    section: "",
     text: "Above all, don't lie to yourself. The man who lies to himself and listens to his own lie comes to a point that he cannot distinguish the truth within him.",
     page: 44,
     date: "Feb 8",

@@ -23,27 +23,3 @@ button {
 input, textarea {
   font-family: inherit;
 }
-
-/* ─── Responsive app container ───────────────────────────────────────── */
-.app {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  min-height: 100vh;
-  border-left: var(--border-light);
-  border-right: var(--border-light);
-  background: var(--color-bg);
-}
-
-/* Tablet — 768px */
-@media (min-width: 768px) {
-  .app {
-    max-width: 768px;
-  }
-}
-
-/* Desktop — 1440px */
-@media (min-width: 1440px) {
-  .app {
-    max-width: 1200px;
-  }
-}

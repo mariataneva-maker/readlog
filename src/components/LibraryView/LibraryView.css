@@ -19,7 +19,7 @@
 .library__title {
   font-family: var(--font-serif);
   font-size: var(--text-hero);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1;
   color: var(--color-primary);
 }
